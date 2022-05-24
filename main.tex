@@ -1,0 +1,91 @@
+\documentclass[12pt,a4paper]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% packages %%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+\usepackage{tabulary}
+
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{placeins}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage[all]{xy}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage[left=2cm,right=2cm,top=3cm,bottom=2.5cm]{geometry}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{psfrag}
+\usepackage{minted}
+\usepackage[T1]{fontenc}
+
+
+\graphicspath{ {./images/} }
+
+
+\newcommand{\course}{\textbf{Introdução ao Aprendizado de Máquina}}
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{exa}[thm]{Example}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{coro}[thm]{Corollary}
+\newtheorem{quest}{Question}[section]
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\rhead{ \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%% title page %%%%%%%%%%%%%%%%%%%%%%%%%%
+\thispagestyle{empty}
+\begin{center}
+	%\textbf{AFRICAN INSTITUTE FOR MATHEMATICAL SCIENCES \\[0.5cm]
+	%(AIMS RWANDA, KIGALI)}
+	\vspace{0.5cm}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%% assignment information %%%%%%%%%%%%%%%%
+\noindent
+\rule{17cm}{0.2cm}\\[0.3cm]
+
+Disciplina: \course \hfill Date: \today\\
+\rule{17cm}{0.05cm}
+
+\section{Integrantes}
+
+Daniel Angelo Esteves Lawand -  \#USP 10297693\\
+Thiago Gomes Verissimo - \#USP 5385361\\
+Victor Luiz Serra - \#USP 10362650\\
+
+\section{Objetivo}
+
+O projeto final do grupo tem como objetivo desenvolver um modelo de aprendizado supervisionado em regressão, a fim de prever, dado um determinado conjunto de features, a nota do ENEM de um aluno em específico. Essa nota será composta pela média do aluno nas áreas de Nota da prova de Ciências da Natureza, Ciências Humanas, Linguagens e Códigos, Matemática, excluindo a nota de redação.
+
+\section{Dados a serem usados}
+Para o treinamento do modelo iremos utilizar a base de dados do ENEM[1]. Nela temos informações de cada inscrito que prestou a prova do ENEM no ano de 2020, incluindo dados à respeito do aluno e da sua escola. Juntamente a ela utilizaremos duas outras bases de dados.São estas a base de dados da SAEB[2] (Sistema de Avaliação da Educação Básica) e a do Censo Escolar[3]. As utilizaremos à fim de complementar as informações e nos fornecer uma visão da qualidade do ensino no município que o participante se encontra, levando em consideração o âmbito administrativo e a localidade (rural ou urbana) em que a escola do participante se insere.
+
+\section{Bibliografia}
+\renewcommand{\section}[2]{}%
+\begin{thebibliography}{3}
+\bibitem{enem}
+INEP (2021), Microdados do Enem 2020. Disponível em: https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/enem
+
+\bibitem{saeb}
+INEP (2019) Sistema de Avaliação da Educação Básica (SAEB). Disponível em: https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/saeb/resultados
+
+\bibitem{censo}
+INEP (2020), Censo Escolar. Disponível em:https://www.gov.br/inep/pt-br/areas-de-atuacao/pesquisas-estatisticas-e-indicadores/censo-escolar/resultados
+\end{thebibliography}
+
+\end{document}
